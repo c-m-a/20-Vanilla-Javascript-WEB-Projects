@@ -1,3 +1,36 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-root);
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--body-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 3rem;
+}
+
 /* Variables */
 :root {
   --body-bg: #f9fafb;
@@ -12,39 +45,6 @@
   --success-color: #2ecc71;
 }
 
-/* Reset */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: var(--font-root);
-}
-
-body {
-  font-size: 1.6rem;
-  background-color: var(--body-bg);
-  font-family: 'Open Sans', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-
-h2 {
-  text-align: center;
-  margin: 0 0 2rem;
-}
-
 .container {
   background-color: var(--container-bg-color);
   border-radius: .5rem;
@@ -53,18 +53,21 @@ h2 {
   box-shadow: 0 .2rem 1rem rgba(0,0,0, 0.3);
 }
 
-.form-control {
+.form__control {
   position: relative;
   padding-bottom: 1rem;
 }
 
-.form-control label {
+.form__label {
   color: var(--label-color);
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
   margin-bottom: .5rem;
 }
 
-.form-control input {
+.form__input {
   border: .2rem solid var(--input-border);
   border-radius: .4rem;
   width: 100%;
@@ -72,30 +75,25 @@ h2 {
   font-size: 1.4rem;
 }
 
-.form-control input:focus {
-  outline: 0;
-  border-color: var(--input-border-focus-color);
-}
-
-.form-control.success input {
+.form__input--success {
   border-color: var(--success-color);
 }
 
-.form-control.error input {
+.form__input--error {
   border-color: var(--error-color);
 }
 
-.form-control small {
+.form__msg {
+  text-align: right;
   color: var(--error-color);
-  margin-left: 1rem;
   visibility: hidden;
 }
 
-.form-control.error small {
+.form__msg--show {
   visibility: visible;
 }
 
-.form button {
+.btn {
   cursor: pointer;
   font-size: 1.6rem;
   background-color: var(--button-color);
@@ -107,5 +105,7 @@ h2 {
   width: 100%;
 }
 
-.form button:hover {
+.form__input:focus {
+  border-color: var(--input-border-focus-color);
 }
+
