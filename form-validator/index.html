@@ -11,27 +11,59 @@
     <div class="container">
       <form id="form" class="form">
         <h2>Sign Up With Us</h2>
-        <div class="form-control">
-          <label for="username">Username</label>
-          <input id="username" type="text" placeholder="Enter username" />
-          <small>Error message</small>
+        <div class="form__control">
+          <label class="form__label" for="username">
+            <span>Username</span>
+            <small class="form__msg"></small>
+          </label>
+          <input
+            class="form__input"
+            id="username"
+            type="text"
+            placeholder="Enter username"
+            oninput="hideErrorMsg(this)"
+            />
         </div>
-        <div class="form-control">
-          <label for="username">Email</label>
-          <input id="email" type="text" placeholder="Enter Email" />
-          <small>Error message</small>
+        <div class="form__control">
+          <label class="form__label" for="email">
+            <span>Email</span>
+            <small class="form__msg"></small>
+          </label>
+          <input
+            class="form__input"
+            id="email"
+            type="text"
+            placeholder="Enter Email"
+            oninput="hideErrorMsg(this)"
+            />
         </div>
-        <div class="form-control">
-          <label for="username">Password</label>
-          <input id="password" type="password" placeholder="Enter password" />
-          <small>Error message</small>
+        <div class="form__control">
+          <label class="form__label" for="password">
+            <span>Password</span>
+            <small class="form__msg"></small>
+          </label>
+          <input
+            class="form__input"
+            id="password"
+            type="password"
+            placeholder="Enter password"
+            oninput="hideErrorMsg(this)"
+            />
         </div>
-        <div class="form-control">
-          <label for="username">Confirm Password</label>
-          <input id="password-confirm" type="password" placeholder="Confirm password" />
-          <small>Error message</small>
+        <div class="form__control">
+          <label class="form__label" for="password-confirmation">
+            <span>Confirm Password</span>
+            <small class="form__msg"></small>
+          </label>
+          <input
+            class="form__input"
+            id="password-confirmation"
+            type="password"
+            placeholder="Confirm password"
+            oninput="hideErrorMsg(this)"
+            />
         </div>
-        <button type="submit">Sign Up</button>
+        <button class="btn" type="submit">Sign Up</button>
       </form>
     </div>
     <script src="./js/script.js"></script>
