@@ -5,4 +5,4 @@ This project is part of the Udemy Course
 
 ## Project's List
 
-[1. Simple Validation Form Using Vanilla]()
+[1. Simple Validation Form Using Vanilla](https://github.com/enicmaio/20-Vanilla-Javascript-WEB-Projects/tree/master/form-validator)
